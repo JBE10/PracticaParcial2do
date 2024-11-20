@@ -86,7 +86,16 @@ public class Main {
                 return;
             }
             System.out.println(forma.getId());
-            System.out.println(forma.getTipo());
+
+            if(forma.getTipo() == 1){
+                System.out.println("Circulo");
+            }
+            else if(forma.getTipo() == 2){
+                System.out.println("Cuadrado");
+            }
+            else if(forma.getTipo() == 3){
+                System.out.println("Triangulo");
+            }
             System.out.println(forma.getArea());
 
         }
@@ -125,4 +134,5 @@ public class Main {
         }
         System.out.println(suma);
     }
+
 }
