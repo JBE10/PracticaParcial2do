@@ -29,5 +29,12 @@ public class Testeo {
         almacen.eliminarForma(1);
         assertEquals(almacen.getFormas().size(), 0);
     }
+    @Test
+    public void testCirculo() throws YaExisteEx {
+        Forma f3=new Circulo(5,2);
+        almacen.agregarForma(f3);
+
+        assertEquals(f3.calcularArea(), 12.566370614359172, 0.1);
+    }
 
 }
