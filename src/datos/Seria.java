@@ -2,10 +2,7 @@ package datos;
 
 import negocios.AlmacenDeFormas;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class Seria {
     public static void serializarAlmacen(AlmacenDeFormas almacen, String archivo) {
@@ -17,6 +14,10 @@ public class Seria {
         }
     }
     public static AlmacenDeFormas deserializarAlmacen(String archivo) {
+        File file = new File(archivo);
+        if (!file.exists()) {
+            return null;
+        }
         try (FileInputStream archivoEntrada = new FileInputStream(archivo);
              ObjectInputStream entrada = new ObjectInputStream(archivoEntrada)) {
             return (AlmacenDeFormas) entrada.readObject();

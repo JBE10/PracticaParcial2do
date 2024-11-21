@@ -50,7 +50,7 @@ public class Circulo extends Forma implements Serializable {
         return Math.PI*Math.pow(this.radio,2);
     }
     public double calcularCircunferencia(){
-        return 2*Math.PI*this.radio;
+        return 2 * Math.PI * this.radio;
     }
 
 }

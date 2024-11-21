@@ -1,12 +1,12 @@
 package test;
 import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import exepciones.YaExisteEx;
 import negocios.AlmacenDeFormas;
 import negocios.Circulo;
 import negocios.Forma;
-import org.junit.Before;
-import org.junit.Test;
 
 
 public class Testeo {
@@ -31,10 +31,10 @@ public class Testeo {
     }
     @Test
     public void testCirculo() throws YaExisteEx {
-        Forma f3=new Circulo(5,2);
+        Forma f3=new Circulo(5,6);
         almacen.agregarForma(f3);
 
-        assertEquals(f3.calcularArea(), 12.566370614359172, 0.1);
+        assertEquals(f3.calcularCircunferencia(), 37.69911184307752, 0.1);
     }
 
 }
