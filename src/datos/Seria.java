@@ -17,6 +17,8 @@ public class Seria {
         File file = new File(archivo);
         if (!file.exists()) {
             return null;
+
+
         }
         try (FileInputStream archivoEntrada = new FileInputStream(archivo);
              ObjectInputStream entrada = new ObjectInputStream(archivoEntrada)) {
@@ -24,7 +26,10 @@ public class Seria {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+
+
         }
     }
 }
+
 
